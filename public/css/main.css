@@ -1,0 +1,35 @@
+body {
+    background-image: url(../images/background.png);
+}
+.b-preloader {
+    color: #53BF6B;
+    display: inline-block;
+}
+.b-server {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+.b-server__title {
+    text-align: center;
+    color: #53BF6B;
+}
+.b-server__hosts-list {
+    padding: 0 !important;
+}
+.b-server__hosts-list table {
+    background-color: #D6D6D6;
+}
+.b-server__hosts-list thead tr {
+    background-color: #474747;
+    color: #fff;
+}
+.b-server__hosts-list tbody th {
+    vertical-align: middle !important;
+    height: 39px;
+}
+.b-server__hosts-list-name {
+    width: 20%;
+}
+.b-server__service-btn {
+    margin-left: 3px;
+}

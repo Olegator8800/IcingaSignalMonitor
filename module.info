@@ -1,0 +1,4 @@
+Module: signalmonitor
+Version: 0.5
+Description: Signal monitor module
+ Alternative dashboard module allows you build the interface displays the status of services
