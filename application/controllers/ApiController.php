@@ -53,7 +53,7 @@ class SignalMonitor_ApiController extends Controller
             'host_name',
             'service_display_name',
             'service_description',
-            'service_state' => $stateColumn,
+            'service_state',// => $stateColumn,
             'service_in_downtime',
             'service_acknowledged',
             'service_output',
