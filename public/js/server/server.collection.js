@@ -59,29 +59,6 @@ define(
             var _this = this,
                 apiUrl = this.app().getConfig().api_url;
 
-            /*var config = [
-                        {
-                            name: 'room 1',
-                            sort: 1,
-                            hosts: [
-                                    {
-                                        name: 'icinga2.demo.icinga.org',
-                                        sort: 0
-                                    }
-                                ]
-                        },
-                        {
-                            name: 'room 2',
-                            sort: 2,
-                            hosts: [
-                                    {
-                                        name: 'localhost',
-                                        sort: 0
-                                    }
-                                ]
-                        }
-                    ];*/
-
             $.ajax({
                 url: apiUrl,
                 dataType: 'json'
@@ -103,12 +80,14 @@ define(
                     });
 
                     _(result).each(function(host) {
+                        host = host || {};
+
                         var index = hostList.indexOf(host.name);
 
                         if (index > -1) {
                             hosts.push(host);
-                            //remove host in result
-                            result.splice(index, 1);
+                            //marked host to remove in result
+                            result[index] = null;
                         }
                     });
 
@@ -118,6 +97,9 @@ define(
 
                     _this.add(data);
                 });
+
+                //remove marked hosts
+                result = _.without(result, null);
 
                 if (result.length > 0) {
                     _this.add({
