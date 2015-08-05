@@ -28,6 +28,14 @@ define(
 
         hosts: function() {
             return this._hosts;
+        },
+
+        toJSON: function() {
+            return {
+                name: this.get('name'),
+                sort: this.get('sort'),
+                hosts: this.hosts().toJSON()
+            }
         }
     });
 });

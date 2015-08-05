@@ -33,6 +33,13 @@ define(
 
         services: function() {
             return this._services;
+        },
+
+        toJSON: function() {
+            return {
+                name: this.get('name'),
+                sort: this.get('sort')
+            };
         }
     });
 });

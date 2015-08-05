@@ -3,6 +3,10 @@ define(function() {
 
         api_url: '/icingaweb2/signalmonitor/api/list',
 
+        update_time: 60, //sec
+
+        defaultServerName: 'others',
+
         //see http://docs.icinga.org/latest/en/pluginapi.html#outputlengthrestrictions
         status_code: [
             {code: 0, state: 'OK'}

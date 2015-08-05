@@ -32,7 +32,6 @@ class SignalMonitor_ApiController extends Controller
                 'host_state_type',
                 'host_last_state_change',
                 'host_address',
-                //'host_handled',
             );
 
         $hostsResult = $this->backend->select()->from('hoststatus', $columns);
@@ -40,7 +39,7 @@ class SignalMonitor_ApiController extends Controller
         foreach ($hostsResult as $host) {
             $hosts[$host->host_name] = array(
                         'name' => $host->host_name,
-                        'state' => $host->host_name,
+                        'state' => $host->host_state,
                         'address' => $host->host_address,
                         'last_change' => $host->host_last_state_change,
                         'service' => array(),

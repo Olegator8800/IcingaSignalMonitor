@@ -4,7 +4,8 @@ define(['core', 'text!./template.html'], function(Core, template) {
         template: template,
 
         areas: {
-            'content': '.j-content'
+            'menu': '.j-menu'
+            ,'content': '.j-content'
         }
     });
 })

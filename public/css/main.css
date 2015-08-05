@@ -30,6 +30,10 @@ body {
 .b-server__hosts-list-name {
     width: 20%;
 }
+.b-server__hosts-status_danger {
+    color: #fff;
+    background-color: #d9534f;
+}
 .b-server__service-btn {
     margin-left: 3px;
 }

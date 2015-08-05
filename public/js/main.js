@@ -2,6 +2,7 @@ require.config({
     paths: {
         'jquery': 'vendor/jquery/jquery'
         ,'jquery-dropdown': 'vendor/jquery-dropdown/jquery.dropdown'
+        ,'gritter': 'vendor/jquery-gritter/js/jquery.gritter'
         ,'text': 'vendor/requirejs-text/text'
         ,'underscore': 'vendor/underscore-amd/underscore'
         ,'backbone': 'vendor/backbone-amd/backbone'
@@ -9,9 +10,11 @@ require.config({
     },
     shim: {
         'bootstrap': { deps: ['jquery'] }
+        ,'gritter': {  deps: ['jquery'] }
     },
     deps: [
         'bootstrap'
+        ,'gritter'
     ],
     packages: [
         'core'

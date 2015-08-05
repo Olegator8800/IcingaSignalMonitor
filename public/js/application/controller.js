@@ -8,6 +8,7 @@ define(['backbone'], function(Backbone) {
         mainAction: function() {
             this.app()
                 .view('main')
+                .menu(this.app().view('menu'))
                 .content(this.app().collection('Server').view('serverList'))
                 .render();
         }

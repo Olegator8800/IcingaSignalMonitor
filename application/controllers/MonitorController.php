@@ -56,11 +56,11 @@ class SignalMonitor_MonitorController extends Controller
 
         $command = "ln -s {$modulePublicPath} {$publicPath}/{$this->moduleName}_public";
 
-        if (!is_writable($publicPath)) {
+        //if (!is_writable($publicPath)) {
             echo 'you need exec: <br/> '.$command;
-        } else {
-            exec($command);
-        }
+        //} else {
+        //    exec($command);
+        //}
 
         die;
     }
