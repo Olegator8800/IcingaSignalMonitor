@@ -64,15 +64,17 @@ define(
                 dataType: 'json'
             }).done(function(result) {
 
-                var layout = _this.layout;
+                var layout = _this.layout,
+                    groupedHosts = [],
+                    otherHosts = [];
 
                 _this.reset();
 
                 result = _.toArray(result);
 
                 _(layout).each(function(server) {
-                    var data = {};
-                        hostList = [];
+                    var data = {},
+                        hostList = [],
                         hosts = [];
 
                     _(server.hosts).each(function(host) {
@@ -80,14 +82,12 @@ define(
                     });
 
                     _(result).each(function(host) {
-                        host = host || {};
-
                         var index = hostList.indexOf(host.name);
 
                         if (index > -1) {
                             hosts.push(host);
                             //marked host to remove in result
-                            result[index] = null;
+                            groupedHosts.push(host.name);
                         }
                     });
 
@@ -98,13 +98,19 @@ define(
                     _this.add(data);
                 });
 
-                //remove marked hosts
-                result = _.without(result, null);
+                //remove grouped hosts
+                _(result).each(function(host) {
+                    var index = groupedHosts.indexOf(host.name);
 
-                if (result.length > 0) {
+                    if (index == -1) {
+                        otherHosts.push(host);
+                    }
+                });
+
+                if (otherHosts.length > 0) {
                     _this.add({
                         name: _this.app().getConfig().defaultServerName, 
-                        hosts: result
+                        hosts: otherHosts
                     });
                 }
             });
