@@ -44,7 +44,7 @@ body {
     background-color: #d9534f;
 }
 .b-server__hosts-list tr:hover .b-server__service-btn {
-    max-width: none !important;
+    width: auto !important;
     line-height: 1.5 !important;
 }
 .b-server__service-btn {
@@ -54,7 +54,7 @@ body {
     padding-right: 2px !important;
     text-overflow: ellipsis;
     white-space: nowrap !important;
-    max-width: 50px;
+    width: 50px;
     overflow: hidden !important;
     line-height: 1.4 !important;
 }
