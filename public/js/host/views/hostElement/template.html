@@ -1,5 +1,7 @@
 <tr>
-    <th <%if(this.model.get('state') != 0){%>class="b-server__hosts-status_danger"<%}%>><%=this.model.getDisplayName()%></th>
+    <th class="b-host__title<%if(this.model.get('state') != 0){%> b-server__hosts-status_danger<%}%>">
+        <abbr title="<%=this.model.getDisplayName()%>"><%=this.model.getDisplayName()%></abbr>
+    </th>
     <td class="j-services-list">
     </td>
 </tr>

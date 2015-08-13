@@ -25,6 +25,7 @@ define(
                 return new serverListView({model: _this});
             });
 
+            this.timeUpdate = this.app().getConfig().update_time;
             this.startAutoSync();
         },
 

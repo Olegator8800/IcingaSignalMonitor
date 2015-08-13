@@ -1,1 +1,3 @@
-<button type="button" class="b-server__service-btn btn <%if(this.model.get('state') == 0){%>btn-success<%}else{%>btn-danger<%}%> btn-xs" data-toggle="tooltip" data-placement="bottom" title="<%=this.model.get('output')%>"><%=this.model.get('name')%></button>
+<button type="button" class="b-server__service-btn btn <%if(this.model.get('state') == 0){%>btn-success<%}else{%>btn-danger<%}%> btn-xs" data-toggle="tooltip" data-placement="bottom" data-html="true" title="| <%=this.model.get('name')%> | <br/> <%=this.model.get('output')%>">
+<%=this.model.get('name')%>
+</button>

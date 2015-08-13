@@ -11,13 +11,22 @@ body {
 }
 .b-server__title {
     text-align: center;
-    color: #53BF6B;
+    background-color: #d6d6d6;
+    margin-top: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 .b-server__hosts-list {
     padding: 0 !important;
 }
 .b-server__hosts-list table {
     background-color: #D6D6D6;
+    margin-bottom: 0px !important;
+}
+.b-server__hosts-list th,
+.b-server__hosts-list td
+{
+    padding: 4px !important;
 }
 .b-server__hosts-list thead tr {
     background-color: #474747;
@@ -34,6 +43,24 @@ body {
     color: #fff;
     background-color: #d9534f;
 }
+.b-server__hosts-list tr:hover .b-server__service-btn {
+    max-width: none !important;
+    line-height: 1.5 !important;
+}
 .b-server__service-btn {
-    margin-left: 3px;
+    margin-left: 2px;
+    margin-bottom: 1px !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    text-overflow: ellipsis;
+    white-space: nowrap !important;
+    max-width: 50px;
+    overflow: hidden !important;
+    line-height: 1.4 !important;
+}
+.b-host__title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100px;
+    overflow: hidden;
 }

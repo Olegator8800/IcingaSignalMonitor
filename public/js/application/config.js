@@ -3,7 +3,7 @@ define(function() {
 
         api_url: '/icingaweb2/signalmonitor/api/list',
 
-        update_time: 60, //sec
+        update_time: 30, //sec
 
         defaultServerName: 'others',
 
